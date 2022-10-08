@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Email Investigations – Accessibility And Limitations. :: Osint For All</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Even in the age of instant messaging apps, email still serves as an ‘official’ medium to communicate between two parties. It’s ironic that electronic mail has not lost its charm till date within the barrage of privacy respecting encrypted chat messengers.
+Instead, email services nowadays are adapting to the new age norm of privacy and making their products more privacy hardened with encrypted mailboxes or hard to locate data centers and so on." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/articles/email/email/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="Amoghavarsha" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Email Investigations – Accessibility And Limitations.">
+<meta property="og:description" content="Even in the age of instant messaging apps, email still serves as an ‘official’ medium to communicate between two parties. It’s ironic that electronic mail has not lost its charm till date within the barrage of privacy respecting encrypted chat messengers.
+Instead, email services nowadays are adapting to the new age norm of privacy and making their products more privacy hardened with encrypted mailboxes or hard to locate data centers and so on." />
+<meta property="og:url" content="/articles/email/email/" />
+<meta property="og:site_name" content="Osint For All" />
+
+  
+    <meta property="og:image" content="/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Osint For All
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/articles">Articles</a></li>
+        
+      
+        
+          <li><a href="/ctf">CTF</a></li>
+        
+      
+        
+          <li><a href="/linux">Linux</a></li>
+        
+      
+        
+          <li><a href="/ofag">OFA Guild</a></li>
+        
+      
+        
+          <li><a href="/diy">DIY</a></li>
+        
+      
+        
+          <li><a href="/videos">Videos</a></li>
+        
+      
+        
+          <li><a href="/support">Support Us</a></li>
+        
+      
+        
+          <li><a href="/training">Training</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/articles">Articles</a></li>
+      
+    
+      
+        <li><a href="/ctf">CTF</a></li>
+      
+    
+      
+        <li><a href="/linux">Linux</a></li>
+      
+    
+      
+        <li><a href="/ofag">OFA Guild</a></li>
+      
+    
+      
+        <li><a href="/diy">DIY</a></li>
+      
+    
+      
+        <li><a href="/videos">Videos</a></li>
+      
+    
+      
+        <li><a href="/support">Support Us</a></li>
+      
+    
+      
+        <li><a href="/training">Training</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/articles/email/email/">Email Investigations – Accessibility And Limitations.</a></h1>
+  <div class="post-meta">
+    
+    
+      <span class="post-author">:: Amoghavarsha</span>
+    
+    
+      <span class="post-reading-time">:: 5 min read (919 words)</span>
+    
+  </div>
+
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>Even in the age of instant messaging apps, email still serves as an
+‘official’ medium to communicate between two parties. It’s ironic
+that electronic mail has not lost its charm till date within the
+barrage of privacy respecting encrypted chat messengers.</p>
+<p>Instead, email services nowadays are adapting to the new age norm of
+privacy and making their products more privacy hardened with
+encrypted mailboxes or hard to locate data centers and so on. But
+the core technology behind email hasn’t changed since its inception.</p>
+<h1 id="first-steps">First Steps<a href="#first-steps" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>It has become a tradition for any experienced or rookie
+investigators to start their investigation just by ‘Googling’ stuff
+out. Finding information about emails is no different, an email that
+has to be investigated could be played around in a variety of forms.</p>
+<p><strong>Raw Email</strong></p>
+<p>When a plain email is put in the search bar, the results are limited
+to the fact that how often that email has been used in public and
+how open it is to the public. To simplify, if the email is used on
+multiple blogs, academic websites, personal websites, social media,
+paste bins, forums etc,. There is a strong chance of retrieving the
+information about the keywords in the email.</p>
+<p><img src="/articles/email/1.png" alt="1"></p>
+<p>From the above image, it’s evident that Google search engine
+retrieved the information with some keywords involved within the
+email. It recognized some keywords like ‘john’, ‘snow’, and ‘gmail’.
+But it didn’t point towards the exact email; why? Because the exact
+email wasn’t open for viewing in the wild. Interestingly it also
+tried to match the keywords from different social media such as
+Twitter and Pininterest. Endless scrolling and jumping to each page
+might lead to the exact email or might not, and that’s the
+limitation for the investigators and a slight win for privacy
+settings.</p>
+<p><strong>Quotes</strong></p>
+<p>Adding quotes around the email tells the search engine to look for
+the exact keywords that’s specified within the quotes.</p>
+<p><img src="/articles/email/2.png" alt="2"></p>
+<p>Surprisingly, with quotes the email led to one of the primary
+sources of information.</p>
+<p>Bottom line, using quotes around an email tries to retrieve specific
+information if it exists on the internet.</p>
+<p>That’s it? Is it that easy to retrieve information on anyone just by
+Googling the email address? Well, the answer is no.</p>
+<p><img src="/articles/email/3.png" alt="3"></p>
+<p><img src="/articles/email/4.png" alt="4"></p>
+<p>As aforementioned, Google or any search engines could retrieve the
+information only if they are present on the internet. It depends on
+a lot of factors such as one’s privacy settings, social engagement,
+relevance, repeated usage of the same email, or being public and so
+on.</p>
+<h1 id="dorking">Dorking<a href="#dorking" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Google dorking is an advanced way of searching results on the
+internet. Other searching engines such as DuckDuckGo, Bing,
+Startpage, Brave Search and so on could also be used for dorking.
+Basically, dorking lets the user to concise the search results and
+provide the accurate result as possible. And dorking is not only
+limited to search engines, prominent social media platforms like
+Twitter, Facebook, TikTok, Vkontakte etc,. have their own set of
+dorks. Yet again, it depends on the information that’s already
+available and privacy measures of the user. An article about
+advanced search operators/dorks could be found <a href="https://theamoghavarsha.medium.com/advanced-search-operators-1cb514c6cda8">here</a>.</p>
+<h1 id="potential-places-to-look-for-email">Potential Places To Look For Email<a href="#potential-places-to-look-for-email" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>• Public Files – intext:”jack@twitter.com” filetype:pdf OR filetype:docx OR filetype:xls
+• Leaked databases
+• Online forums
+• Academic websites
+• Unfortunately, sometimes on medical websites
+• Government websites
+• Job search websites
+• Automated tools
+• Social media
+• Chat apps</p>
+<h1 id="tools">Tools<a href="#tools" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>There are several tools on the internet that promise to provide much
+more information about an email address than just Googling. A caveat
+here is, those tools are also scraping the data from the internet
+probably with better scraping methods and algorithms. These tools
+also change every now and then, due to the changes made from the
+product/service provider’s end (email) or changes made in their own
+code(tools). And it’s not new to the OSINT community if some service
+goes down or becomes redundant, there’ll always be new tools which
+could be more or less efficient and that depends on various factors
+that are discussed in the previous paragraphs.</p>
+<p>Here are some tools to find information on emails.</p>
+<ol>
+<li><a href="https://epieos.com/">Epieos</a></li>
+<li><a href="https://hunter.io/email-finder">Hunter</a></li>
+<li><a href="https://www.spiderfoot.net/">SpiderFoot</a></li>
+<li><a href="https://www.maltego.com/">Maltego</a></li>
+<li><a href="https://anymailfinder.com/">Anymailfinder</a></li>
+<li><a href="https://intelx.io/">IntelligenceX</a></li>
+</ol>
+<h1 id="miscellaneous-techniques">Miscellaneous Techniques<a href="#miscellaneous-techniques" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Call it stalking or curiosity to know, some platforms such as Skype,
+lets their users to search usernames or emails of other users. Even
+in Gmail, some recommendations appear while one types an email for
+the first time. Some apps also provide information about other users
+when one’s contacts are synced. There could be many other apps out
+there which provide a functionality to search for emails or
+usernames. Another trick could be by changing language in inspect
+element, or changing geographical location using proxies or VPNs to
+fetch country specific results. Last but not the least, using the
+power of other search engines and web scrapers along with Google.</p>
+<h1 id="final-words">Final Words<a href="#final-words" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Email investigation through publicly available information is tricky
+and prone to many false positives. This is because of the fact that
+email service providers are becoming more closed to protect their
+users’ privacy. And also, most of the search engines out there are
+not <a href="https://en.wikipedia.org/wiki/Open_source">open source</a>, it means no one knows how their algorithms work or how exactly they query information time to time and how a particular
+information is queried. This is a challenge for many SEO experts and
+email marketers to update themselves and understand how search
+engines function and change overtime. There are dorks, but again
+their use cases are limited. But the use of emails seems to not stop
+anytime soon.</p>
+
+      </div></div>
+
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2022 <a href="https://osintforall.in">Osint For All</a></span>
+    
+    <span>:: <a href="https://osintforall.in/index.xml">RSS</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+  <script src="/assets/languageSelector.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

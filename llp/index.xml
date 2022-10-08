@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Amoghavarsha</title>
+    <link>/llp/</link>
+    <description>Recent content on Amoghavarsha</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/llp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arrays Are Powerful In Bash</title>
+      <link>/llp/aib/aib/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/llp/aib/aib/</guid>
+      <description>“$” might symbolize dollars to many of you, but for bash users it’s the holy grail for retrieving stored data. Speaking of which, do you know what’s the common place to store a piece of data? A variable.
+Variable The name itself incurs that variable is something that could be varied. So is it like a chameleon that changes colors all the time? Not precisely, if you remember from the intro its a common place to store a piece of data.</description>
+      <content>&lt;p&gt;&lt;img src=&#34;/llp/AIB/1.png&#34; alt=&#34;eye&#34;&gt;&lt;/p&gt;
+&lt;p&gt;“$” might symbolize dollars to many of you, but for bash users it’s
+the holy grail for retrieving stored data. Speaking of which, do you
+know what’s the common place to store a piece of data? A variable.&lt;/p&gt;
+&lt;h1 id=&#34;variable&#34;&gt;Variable&lt;/h1&gt;
+&lt;p&gt;The name itself incurs that variable is something that could be
+varied. So is it like a chameleon that changes colors all the time?
+Not precisely, if you remember from the intro its a common place to
+store a piece of data. That’s right. Mathematically and
+computationally, a variable is something that stores or holds a
+piece of data or value.&lt;/p&gt;
+&lt;p&gt;You might have heard the term “place holder” and that’s exactly what
+a variable is. So how to store and retrieve information through
+variables?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;place=&amp;quot;World&amp;quot;
+echo &amp;quot;Hello $place&amp;quot; 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the above code snippet, place is a variable and World is the
+value assigned to the variable. In the next line, the value assigned to the variable is retrieved through echo command. As
+aforementioned, “$” is the holy grail to retrieve stored value in
+bash. An important thing to note here is, “=” doesn’t mean variable
+name has a constant value, it just means that a value is assigned to
+a variable name.&lt;/p&gt;
+&lt;p&gt;Now the value of variable place could be varied.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;place=&amp;quot;Mars&amp;quot;
+echo &amp;quot;Hello $place&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now the value of variable has changed to Mars from World. Imagine a
+box where you could place an item and replace that item whenever you
+wish.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if you want to store many pieces of data in a single box?&lt;/p&gt;
+&lt;h1 id=&#34;array&#34;&gt;Array&lt;/h1&gt;
+&lt;p&gt;Array is an ordered series of arrangement. Computationally, array
+holds multiple values, whereas a normal variable holds a single
+value. Array could also be defined as a special type of variable as
+it could hold more than one value.
+A typical array consists of an array name and an index. Each index
+number associates with an element in the array.
+Lets see how to create an array.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movies=(&#39;Primer&#39; &#39;Inception&#39; &#39;Enemy&#39; &#39;Tenet&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Two things to keep in mind. Unlike other programming languages, bash
+arrays are not led by commas after every element but spaces. There
+is no space after array name(i.e, movies=), it’s followed by “=”. If
+there is a space followed by the array name, shell interprets the
+array name as a program to execute and “=” as the first parameter.&lt;/p&gt;
+&lt;p&gt;Now lets try to retrieve all the elements of the array.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As you could see in the above screenshot, you could retrieve the
+array elements in two ways: one using the @ symbol between the
+square brackets or using * symbol.&lt;/p&gt;
+&lt;p&gt;Here are some tips, you could remember @ by memorizing it like all
+and * is a wild card which signifies everything. The syntax of
+retrieving an array could look intimidating, so always remember “$”
+is the holy grail for retrieving information, array names are placed
+in between flower brackets {}, followed by special characters or
+numbers in square brackets.&lt;/p&gt;
+&lt;p&gt;Lets see how to retrieve an individual element of the array.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Index numbers in bash arrays starts with 0 (similar to most of the
+programming language, unlike R). So index 2 returns the value of
+Enemy.&lt;/p&gt;
+&lt;p&gt;Let’s see what happens when negative indices are used.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;p&gt;So the negative index number retrieves values from reverse order.&lt;/p&gt;
+&lt;p&gt;You could also assign elements to the array explicitly in three
+ways: Subscript Assignment, Index Assignment and assignment by name.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Subscript Assignment&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movies=([4]=&#39;Ten cloverfield lane&#39; [5]=&#39;Timecrimes&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Index Assignment&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movies[1]=&#39;Vanilla Sky&#39;
+movies[2]=&#39;Mr.Nobody&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/10.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Assignment by names&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;movies[zero]=&#39;Magnolia&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/11.png&#34; alt=&#34;11&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if you want to print the elements from one particular index to
+another?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/12.png&#34; alt=&#34;12&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here you are telling the array that from all its elements(@) , print
+from index 1 to index 3.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/13.png&#34; alt=&#34;13&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here you are telling the array that from all its elements(@), start
+from index 1 and print all the following elements.&lt;/p&gt;
+&lt;p&gt;What if, you want to access the index numbers?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;${!movies[@]}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/14.png&#34; alt=&#34;14&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The “!” symbol before array name helps to retrieve indices.&lt;/p&gt;
+&lt;p&gt;What if you want to see how many elements are there in an array?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;${#movies[@]}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/15.png&#34; alt=&#34;15&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The “#” symbol before array name helps to retrieve number of
+elements.&lt;/p&gt;
+&lt;p&gt;How to retrieve specific information from an element in the array?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/16.png&#34; alt=&#34;16&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here the information of zeroth element(Magnolia) is retrieved,
+starting from index 0 till index 2(not included).&lt;/p&gt;
+&lt;p&gt;What if you want to assign a sequence of numbers? You could do it
+manually but here’s a easy way to do it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/17.png&#34; alt=&#34;17&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;seq&lt;/em&gt; is a shell command that prints out sequence of numbers. In the
+above example, &lt;em&gt;seq&lt;/em&gt; is placed in between ` `.&lt;/p&gt;
+&lt;p&gt;Now lets try to write a simple shell script from the above
+learnings.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/llp/AIB/usr/llp/AIB/bin/llp/AIB/bash
+tvshows=(&#39;Mr.Robot&#39; &#39;Homeland&#39; &#39;The Americans&#39; &#39;Death Note&#39; &#39;Erased&#39;)
+for a in &amp;quot;${!tvshows[@]}&amp;quot;; do
+printf &amp;quot;${tvshows[$a]} has an index number of $a\n&amp;quot;
+done
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s save the code as lp.sh. Next lets make it executable – chmod
++x lp.sh.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/18.png&#34; alt=&#34;18&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When the program is executed, you get the above result.&lt;/p&gt;
+&lt;h1 id=&#34;array-modification&#34;&gt;Array Modification&lt;/h1&gt;
+&lt;p&gt;Lets create a new array.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;names=(&#39;Luther&#39; &#39;Ambrose&#39; &#39;Reddington&#39; &#39;Mare&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change the value of index 2 you could do the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;names[2]=’Carrie’
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/19.png&#34; alt=&#34;19&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if, you want to append values by adding more elements to the
+array?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/20.png&#34; alt=&#34;20&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if, you want to add an element at a particular index position?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/21.png&#34; alt=&#34;21&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if you want to delete an element?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/22.png&#34; alt=&#34;22&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here, unset is a &lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;rct=j&amp;amp;q=&amp;amp;esrc=s&amp;amp;source=web&amp;amp;cd=&amp;amp;cad=rja&amp;amp;uact=8&amp;amp;ved=2ahUKEwiUoa6yh6v4AhXsSmwGHQMKDlMQFnoECAUQAQ&amp;amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FShell_builtin&amp;amp;usg=AOvVaw1BOf5zWyabXMcp7cEqn3O5&#34;&gt;shell builtin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/23.png&#34; alt=&#34;23&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if you want to merge two arrays?&lt;/p&gt;
+&lt;p&gt;Lets create another array.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;surnames=(&#39;Dexter&#39; &#39;Hannibal&#39; &#39;Broody&#39; &#39;Dan&#39; &#39;Gordan&#39; &#39;Steve&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/24.png&#34; alt=&#34;24&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What if you want to delete an array?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;unset &amp;lt;array_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/llp/AIB/25.png&#34; alt=&#34;25&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;associative-array&#34;&gt;Associative Array&lt;/h1&gt;
+&lt;p&gt;An associative array is an array that stores string value as an
+index. It could be declared and used in a bash script. This feature
+was added in bash 4. To be sure, just check your bash version.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/26.png&#34; alt=&#34;26&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Declaring an associative array is easy, here’s the syntax.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;declare -A &amp;lt;array_name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Lets declare an associative array and initialize some elements.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/27.png&#34; alt=&#34;27&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Like in normal array, if you want to access an element of the array,
+use the following syntax.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/28.png&#34; alt=&#34;28&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If you want to list the indices of the associative array, do the
+following.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/29.png&#34; alt=&#34;29&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Now lets try to write a simple script to print the indices(keys) and
+values of the associative array.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/30.png&#34; alt=&#34;30&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here’s a catch, what if you want to display the indices in an
+alphabetic order?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/31.png&#34; alt=&#34;31&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To reverse it, use –reverse flag.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/llp/AIB/32.png&#34; alt=&#34;32&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Well that’s it for today. Do practice arrays; because they are
+powerful! Show some love by sharing and subscribing to &lt;a href=&#34;https://www.youtube.com/channel/UCLi7utjkBxAYPtVQhTuiZ2Q&#34;&gt;Linux For Love &amp;amp; Passion&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>
