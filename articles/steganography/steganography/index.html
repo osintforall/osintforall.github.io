@@ -218,14 +218,14 @@ files, it supports JPEG, BMP, WAV and AU formats.</p>
 <p>Let’s create a text file named secret.txt and try to hide it inside
 an image.</p>
 <p><img src="/articles/steganography/1.png" alt="1"></p>
-<pre tabindex="0"><code>steghide embed -cf yoda.jpg -ef secret.txt
+<pre><code>steghide embed -cf yoda.jpg -ef secret.txt
 </code></pre><p>Here -cf is cover file and -ef is embed file. The caveat is, you
 should make sure your cover file is larger than your embed file,
 that’s a no brainer.</p>
 <p><img src="/articles/steganography/2.png" alt="2"></p>
 <p>Now let’s delete the secret.txt and see if we can extract it back
 from the cover file.</p>
-<pre tabindex="0"><code>steghide extract -sf yoda.jpg
+<pre><code>steghide extract -sf yoda.jpg
 </code></pre><p><img src="/articles/steganography/3.png" alt="3"></p>
 <p>Here the -sf is stego file.</p>
 <p><img src="/articles/steganography/4.png" alt="4"></p>
@@ -243,11 +243,11 @@ file. And you have to match or put printable strings together in
 order to solve the challenge.</p>
 <p>If you cat out the file, you will end up with gibberish characters
 printed out on to your screen.</p>
-<pre tabindex="0"><code>cat yoda.jpg
+<pre><code>cat yoda.jpg
 </code></pre><p><img src="/articles/steganography/7.png" alt="7"></p>
 <p>Whereas, if you use strings, you’ll get a bunch of strings with
 printable characters.</p>
-<pre tabindex="0"><code>strings yoda.jpg
+<pre><code>strings yoda.jpg
 </code></pre><p><img src="/articles/steganography/8.png" alt="8"></p>
 <p>Among them, one of it might be your password or flag or a clue to
 the next stage.</p>
@@ -258,7 +258,7 @@ embedding secret messages, exif data could provide some juicy
 information about the image, such as, geo coordinates, camera model,
 creation date and so on. You can use simple tools like gThumb or
 GIMP to edit medtadata.</p>
-<pre tabindex="0"><code>exiftool yoda.jpg
+<pre><code>exiftool yoda.jpg
 </code></pre><p><img src="/articles/steganography/9.png" alt="9"></p>
 <h1 id="binwalk">Binwalk<a href="#binwalk" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p><a href="https://www.kali.org/tools/binwalk/">Binwalk</a> is a tool for searching binary images for embedded files and
@@ -276,7 +276,7 @@ folder.</p>
 <h1 id="wavsteg">Wavsteg<a href="#wavsteg" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>WavSteg is a tool written in Python, which can hide data in files
 with a wav format.</p>
-<pre tabindex="0"><code>stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
+<pre><code>stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
 </code></pre><p><img src="/articles/steganography/13.png" alt="13"></p>
 <p><img src="/articles/steganography/14.png" alt="14"></p>
 <p>While extracting data, you have to specify the exact size of

@@ -215,8 +215,8 @@ piece of data or value.</p>
 <p>You might have heard the term “place holder” and that’s exactly what
 a variable is. So how to store and retrieve information through
 variables?</p>
-<pre tabindex="0"><code>place=&#34;World&#34;
-echo &#34;Hello $place&#34; 
+<pre><code>place=&quot;World&quot;
+echo &quot;Hello $place&quot; 
 </code></pre><p><img src="/linux/AIB/2.png" alt="2"></p>
 <p>In the above code snippet, place is a variable and World is the
 value assigned to the variable. In the next line, the value assigned to the variable is retrieved through echo command. As
@@ -225,8 +225,8 @@ bash. An important thing to note here is, “=” doesn’t mean variable
 name has a constant value, it just means that a value is assigned to
 a variable name.</p>
 <p>Now the value of variable place could be varied.</p>
-<pre tabindex="0"><code>place=&#34;Mars&#34;
-echo &#34;Hello $place&#34;
+<pre><code>place=&quot;Mars&quot;
+echo &quot;Hello $place&quot;
 </code></pre><p><img src="/linux/AIB/3.png" alt="3"></p>
 <p>Now the value of variable has changed to Mars from World. Imagine a
 box where you could place an item and replace that item whenever you
@@ -242,7 +242,7 @@ it could hold more than one value.
 A typical array consists of an array name and an index. Each index
 number associates with an element in the array.
 Lets see how to create an array.</p>
-<pre tabindex="0"><code>movies=(&#39;Primer&#39; &#39;Inception&#39; &#39;Enemy&#39; &#39;Tenet&#39;)
+<pre><code>movies=('Primer' 'Inception' 'Enemy' 'Tenet')
 </code></pre><p>Two things to keep in mind. Unlike other programming languages, bash
 arrays are not led by commas after every element but spaces. There
 is no space after array name(i.e, movies=), it’s followed by “=”. If
@@ -270,14 +270,14 @@ Enemy.</p>
 <p>You could also assign elements to the array explicitly in three
 ways: Subscript Assignment, Index Assignment and assignment by name.</p>
 <p><em>Subscript Assignment</em></p>
-<pre tabindex="0"><code>movies=([4]=&#39;Ten cloverfield lane&#39; [5]=&#39;Timecrimes&#39;)
+<pre><code>movies=([4]='Ten cloverfield lane' [5]='Timecrimes')
 </code></pre><p><img src="/linux/AIB/9.png" alt="9"></p>
 <p><em>Index Assignment</em></p>
-<pre tabindex="0"><code>movies[1]=&#39;Vanilla Sky&#39;
-movies[2]=&#39;Mr.Nobody&#39;
+<pre><code>movies[1]='Vanilla Sky'
+movies[2]='Mr.Nobody'
 </code></pre><p><img src="/linux/AIB/10.png" alt="10"></p>
 <p><em>Assignment by names</em></p>
-<pre tabindex="0"><code>movies[zero]=&#39;Magnolia&#39;
+<pre><code>movies[zero]='Magnolia'
 </code></pre><p><img src="/linux/AIB/11.png" alt="11"></p>
 <p>What if you want to print the elements from one particular index to
 another?</p>
@@ -288,11 +288,11 @@ from index 1 to index 3.</p>
 <p>Here you are telling the array that from all its elements(@), start
 from index 1 and print all the following elements.</p>
 <p>What if, you want to access the index numbers?</p>
-<pre tabindex="0"><code>echo &#34;${!movies[@]}&#34;
+<pre><code>echo &quot;${!movies[@]}&quot;
 </code></pre><p><img src="/linux/AIB/14.png" alt="14"></p>
 <p>The “!” symbol before array name helps to retrieve indices.</p>
 <p>What if you want to see how many elements are there in an array?</p>
-<pre tabindex="0"><code>echo &#34;${#movies[@]}&#34;
+<pre><code>echo &quot;${#movies[@]}&quot;
 </code></pre><p><img src="/linux/AIB/15.png" alt="15"></p>
 <p>The “#” symbol before array name helps to retrieve number of
 elements.</p>
@@ -307,10 +307,10 @@ manually but here’s a easy way to do it.</p>
 above example, <em>seq</em> is placed in between ` `.</p>
 <p>Now lets try to write a simple shell script from the above
 learnings.</p>
-<pre tabindex="0"><code>#!/linux/AIB/usr/linux/AIB/bin/linux/AIB/bash
-tvshows=(&#39;Mr.Robot&#39; &#39;Homeland&#39; &#39;The Americans&#39; &#39;Death Note&#39; &#39;Erased&#39;)
-for a in &#34;${!tvshows[@]}&#34;; do
-printf &#34;${tvshows[$a]} has an index number of $a\n&#34;
+<pre><code>#!/linux/AIB/usr/linux/AIB/bin/linux/AIB/bash
+tvshows=('Mr.Robot' 'Homeland' 'The Americans' 'Death Note' 'Erased')
+for a in &quot;${!tvshows[@]}&quot;; do
+printf &quot;${tvshows[$a]} has an index number of $a\n&quot;
 done
 </code></pre><p>Let’s save the code as lp.sh. Next lets make it executable – chmod
 +x lp.sh.</p>
@@ -318,9 +318,9 @@ done
 <p>When the program is executed, you get the above result.</p>
 <h1 id="array-modification">Array Modification<a href="#array-modification" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>Lets create a new array.</p>
-<pre tabindex="0"><code>names=(&#39;Luther&#39; &#39;Ambrose&#39; &#39;Reddington&#39; &#39;Mare&#39;)
+<pre><code>names=('Luther' 'Ambrose' 'Reddington' 'Mare')
 </code></pre><p>To change the value of index 2 you could do the following.</p>
-<pre tabindex="0"><code>names[2]=’Carrie’
+<pre><code>names[2]=’Carrie’
 </code></pre><p><img src="/linux/AIB/19.png" alt="19"></p>
 <p>What if, you want to append values by adding more elements to the
 array?</p>
@@ -333,10 +333,10 @@ array?</p>
 <p><img src="/linux/AIB/23.png" alt="23"></p>
 <p>What if you want to merge two arrays?</p>
 <p>Lets create another array.</p>
-<pre tabindex="0"><code>surnames=(&#39;Dexter&#39; &#39;Hannibal&#39; &#39;Broody&#39; &#39;Dan&#39; &#39;Gordan&#39; &#39;Steve&#39;)
+<pre><code>surnames=('Dexter' 'Hannibal' 'Broody' 'Dan' 'Gordan' 'Steve')
 </code></pre><p><img src="/linux/AIB/24.png" alt="24"></p>
 <p>What if you want to delete an array?</p>
-<pre tabindex="0"><code>unset &lt;array_name&gt;
+<pre><code>unset &lt;array_name&gt;
 </code></pre><p><img src="/linux/AIB/25.png" alt="25"></p>
 <h1 id="associative-array">Associative Array<a href="#associative-array" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p>An associative array is an array that stores string value as an
@@ -344,7 +344,7 @@ index. It could be declared and used in a bash script. This feature
 was added in bash 4. To be sure, just check your bash version.</p>
 <p><img src="/linux/AIB/26.png" alt="26"></p>
 <p>Declaring an associative array is easy, here’s the syntax.</p>
-<pre tabindex="0"><code>declare -A &lt;array_name&gt;
+<pre><code>declare -A &lt;array_name&gt;
 </code></pre><p>Lets declare an associative array and initialize some elements.</p>
 <p><img src="/linux/AIB/27.png" alt="27"></p>
 <p>Like in normal array, if you want to access an element of the array,
