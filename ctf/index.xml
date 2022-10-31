@@ -6,5 +6,19 @@
     <description>Recent content on Osint For All</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Case-1: Sarah</title>
+      <link>/ctf/case1/1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ctf/case1/1/</guid>
+      <description>On October 24 2007, Sarah Gray, a Linguistics and Philosophy student from MIT disappears mysteriously. Her last email was sent to her friend. The subject said, &amp;ldquo;Hard to say&amp;hellip;&amp;rdquo;, the body said, &amp;ldquo;I can&amp;rsquo;t say much right now, I can&amp;rsquo;t say what happened, I&amp;rsquo;m being watched, I&amp;rsquo;m going somewhere, where no one can find me, but I&amp;rsquo;ll be here somewhere. If you ever find me, say those words and I&amp;rsquo;ll know&amp;rdquo; and two PNG files were attached to the email.</description>
+      <content>&lt;p&gt;On October 24 2007, Sarah Gray, a Linguistics and Philosophy student from MIT disappears mysteriously. Her last email was sent to her friend. The subject said, &amp;ldquo;Hard to say&amp;hellip;&amp;rdquo;, the body said, &amp;ldquo;I can&amp;rsquo;t say much right now, I can&amp;rsquo;t say what happened, I&amp;rsquo;m being watched, I&amp;rsquo;m going somewhere, where no one can find me, but I&amp;rsquo;ll be here somewhere. If you ever find me, say those words and I&amp;rsquo;ll know&amp;rdquo; and two PNG files were attached to the email.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/ctf/case1/1.png&#34; alt=&#34;1&#34;&gt;
+&lt;img src=&#34;/ctf/case1/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Will you ever be able to ask her what happened?&lt;/p&gt;
+</content>
+    </item>
+    
   </channel>
 </rss>
