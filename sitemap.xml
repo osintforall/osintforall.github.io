@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>/collaboration/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/ctf/</loc>
     <priority>0</priority>
   </url>
@@ -28,11 +33,6 @@
   
   <url>
     <loc>/support/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/training/</loc>
     <priority>0</priority>
   </url>
   

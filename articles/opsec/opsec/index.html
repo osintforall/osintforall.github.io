@@ -6,8 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="CTFs (Capture The Flags) are a great way to enhance your skills. Whether it&amp;rsquo;s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!
-I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s CTF about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit." />
+<meta name="description" content="CTFs (Capture The Flags) are a great way to enhance your skills. Whether it’s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!
+I started this tradition of making Twitter threads during TraceLabs’s CTF about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit." />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
 <link rel="canonical" href="/articles/opsec/opsec/" />
@@ -42,8 +42,8 @@ I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s 
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="OPSEC For OSINT CTFs">
-<meta property="og:description" content="CTFs (Capture The Flags) are a great way to enhance your skills. Whether it&amp;rsquo;s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!
-I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s CTF about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit." />
+<meta property="og:description" content="CTFs (Capture The Flags) are a great way to enhance your skills. Whether it’s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!
+I started this tradition of making Twitter threads during TraceLabs’s CTF about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit." />
 <meta property="og:url" content="/articles/opsec/opsec/" />
 <meta property="og:site_name" content="Osint For All" />
 
@@ -124,7 +124,7 @@ I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s 
         
       
         
-          <li><a href="/training">Training</a></li>
+          <li><a href="/collaboration">Collaboration</a></li>
         
       
       
@@ -168,7 +168,7 @@ I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s 
       
     
       
-        <li><a href="/training">Training</a></li>
+        <li><a href="/collaboration">Collaboration</a></li>
       
     
     
@@ -190,7 +190,7 @@ I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s 
       <span class="post-author">:: Amoghavarsha</span>
     
     
-      <span class="post-reading-time">:: 3 min read (566 words)</span>
+      <span class="post-reading-time">:: 3 min read (571 words)</span>
     
   </div>
 
@@ -201,46 +201,42 @@ I started this tradition of making Twitter threads during TraceLabs&amp;rsquo;s 
   
 
   <div class="post-content"><div>
-        <p>CTFs (Capture The Flags) are a great way to enhance your skills. Whether it&rsquo;s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!</p>
-<p>I started this tradition of making <a href="https://twitter.com/AllForOsint/status/1586341595477311488?s=20&amp;t=4HwJG9XY4FZUZv2iOD_hkA">Twitter</a> <a href="https://twitter.com/TheAmoghavarsha/status/1558454428038045697?s=20&amp;t=lK6AuFkSJTPFVmWJSFwo6Q">threads</a> during <a href="https://www.tracelabs.org/initiatives/search-party">TraceLabs&rsquo;s CTF</a> about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit. I&rsquo;m also going to add some extra insights which I couldn&rsquo;t cover in those threads.</p>
+        <p>CTFs (Capture The Flags) are a great way to enhance your skills. Whether it’s information security or Open Source Intelligence based CTFs, at the end of the day, they improve your problem solving abilities, and also, they are fun!</p>
+<p>I started this tradition of making Twitter threads during TraceLabs’s CTF about OPSEC, especially focusing on judges using LOW END COMPUTERS. So I thought why not make a blog post about it so that everyone could benefit. I’m also going to add some extra insights which I couldn’t cover in those threads.</p>
 <h1 id="method-1">Method 1<a href="#method-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <ul>
-<li>Create a separate browser profile and delete it later.
-In Firefox based browsers, go to <em>about:profiles</em> and create one. In Chrome based browsers, you can find an option. And use <strong>User-Agent Switcher</strong>. Or you can also use <strong>Tor Browser</strong>(with/without a separate profile). Avoid installing addons or changing user agent strings while using Tor browser.</li>
+<li>Create a separate browser profile and delete it later. In Firefox based browsers, go to about:profiles and create one. In Chrome based browsers, you can find an option. And use User-Agent Switcher. Or you can also use Tor Browser(with/without a separate profile). Avoid installing addons or changing user agent strings while using Tor browser.</li>
 </ul>
-<p><img src="/articles/opsec/1.jpeg" alt="1"></p>
-<p><img src="/articles/opsec/2.jpeg" alt="2"></p>
+<p><img src="/articles/opsec/1.jpeg" alt="1">
+<img src="/articles/opsec/2.jpeg" alt="2"></p>
 <ul>
 <li>
 <p>Use browser based VPNs within the profile. (Not recommending any VPN in particular, choose one by researching a bit on the web, or probably the ones with good ratings, maximum users and past records)</p>
 </li>
 <li>
-<p>If available use &lsquo;trustable VPN of your choice&rsquo; on your main machine, along with browser vpn. A better way to make sure that your VPN is not leaking DNS is to test at - <a href="http://dnsleaktest.com">http://dnsleaktest.com</a> after setting up.</p>
+<p>If available use ‘trustable VPN of your choice’ on your main machine, along with browser vpn. A better way to make sure that your VPN is not leaking DNS is to test at - <a href="http://dnsleaktest.com">http://dnsleaktest.com</a> after setting up.</p>
 </li>
 <li>
-<p>Use proxy chains (sudo apt install proxychains - for Debian based distros) and add <a href="https://www.vpnbook.com/freevpn">public proxies</a> down below in proxychains.conf, along with VPNs or use <em>Tor proxy</em>. Some privacy focused GNU/Linux distros, provide &lsquo;anonymous mode&rsquo; or &lsquo;tor mode&rsquo;, use them.</p>
+<p>Use proxy chains (sudo apt install proxychains - for Debian based distros) and add public proxies down below in proxychains.conf, along with VPNs or use Tor proxy. Some privacy focused GNU/Linux distros, provide ‘anonymous mode’ or ‘tor mode’, use them.</p>
 </li>
 </ul>
 <p><img src="/articles/opsec/3.png" alt="3"></p>
-<ul>
-<li>Use sock puppet accounts.</li>
-</ul>
 <h1 id="method-2">Method 2<a href="#method-2" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
 <p><strong>Use Live/Persistent Bootable Pendrives</strong></p>
-<p>Live bootable pendrive runs live on your device, that means, when you pull the pendrive out of your system, all your data will be gone. To make it effective, combine it with the instructions from <strong>Method 1</strong>.</p>
-<p>On persistent bootable pendrives, you can allocate some space for storage and also encrypt that space. You can save your data and settings on persistent pendrives. When you pull out the pendrive from the system, nothing will be stored on your system&rsquo;s hard drive.</p>
-<p><strong>Recommended Operating Systems For Bootable Flashdrives</strong></p>
+<p>Live bootable pendrive runs live on your device, that means, when you pull the pendrive out of your system, all your data will be gone. To make it effective, combine it with the instructions from <strong>Method 1.</strong></p>
+<p>On persistent bootable pendrives, you can allocate some space for storage and also encrypt that space. You can save your data and settings on persistent pendrives. When you pull out the pendrive from the system, nothing will be stored on your system’s hard drive.</p>
+<p><strong>Recommended Operating Systems For Bootable Pendrives</strong></p>
 <ol>
 <li><a href="https://tails.boum.org/">Tails</a> (highly recommended)</li>
 <li><a href="https://www.digi77.com/linux-kodachi/">Kodachi OS</a></li>
 <li><a href="https://tsurugi-linux.org/">Tsurugi</a></li>
-<li><a href="https://www.kali.org/">Kali</a></li>
 <li><a href="https://www.parrotsec.org/">Parrot OS</a></li>
+<li><a href="https://www.kali.org/">Kali</a></li>
 </ol>
 <h1 id="faq">FAQ<a href="#faq" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
-<p><strong>What if I can&rsquo;t create sock puppet accounts due to territorial restrictions and I can&rsquo;t/don&rsquo;t want to spend money on buying burners or temporary sim cards?</strong></p>
-<p>Ans: If the CTF is designed so that you only want to verify the details of contestants' submissions, you don&rsquo;t need <strong>sock puppet accounts</strong>; simply follow the instructions in <strong>Method 1</strong> or use the <strong>Tor browser</strong> to do so.This applies only if the submissions are from leading social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on, where you can view the content from a &ldquo;shared link&rdquo; unless it&rsquo;s public. If any of the social media sites require you to <strong>login/signup</strong> for a second post from the same window, simply right-click on the link and open it in a private window, which will fool the link into thinking you were a different person/session accessing the link.</p>
-<h1 id="some-privacy-addons">Some privacy addons.<a href="#some-privacy-addons" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p><strong>What if I can’t create sock puppet accounts due to territorial restrictions and I can’t/don’t want to spend money on buying burners or temporary sim cards?</strong></p>
+<p><strong>Ans:</strong> If the CTF is designed in a way, such that, you only need to verify the details of contestants' submissions, then, you don’t need sock puppet accounts; simply follow the instructions from <strong>Method 1</strong> or use the <strong>Tor browser</strong> to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to <strong>login/signup</strong> for a second post from the same window, simply right-click on the link and open it in a <strong>private window</strong>, which will fool the link into thinking that you are a different person/session accessing the link.</p>
+<p><strong>Some Privacy Addons.</strong></p>
 <ul>
 <li>User Agent Switcher</li>
 <li>Ublock Origin</li>
@@ -248,10 +244,15 @@ In Firefox based browsers, go to <em>about:profiles</em> and create one. In Chro
 <li>Decentraleyes</li>
 <li>Disconnect</li>
 <li>Ghostery</li>
-<li>Facebook container</li>
+<li>Facebook Container</li>
 </ul>
-<p>You can disable Decentraleyes and Disconnect, if they block the javascript from the website that you want to access.</p>
-<p>That’s all I got for today. This post will probably be updated once in a while. Continue to learn, and happy hacking</p>
+<p><strong>Other Useful Addons</strong></p>
+<ul>
+<li>Firefox Multi-Account Containers</li>
+<li>Session Box</li>
+</ul>
+<p>You can disable <em>Decentraleyes</em> and <em>Disconnect</em>, if they block the javascript from the website that you want to access.</p>
+<p>That’s all I got for today. This post will probably be updated once in a while. Keep learning.</p>
 
       </div></div>
 
