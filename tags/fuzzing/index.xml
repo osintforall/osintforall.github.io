@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fuzzing on Osint For All</title>
+    <link>/tags/fuzzing/</link>
+    <description>Recent content in fuzzing on Osint For All</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/fuzzing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fuzzing With Good Old Radamsa</title>
+      <link>/articles/radamsa/radamsa/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/radamsa/radamsa/</guid>
+      <description>&amp;ldquo;1337051nT&amp;rdquo;
+&amp;ldquo;S3rlockedOSINTForall&amp;rdquo;
+&amp;ldquo;oS$INTFOR@LL&amp;rdquo;
+Did you know that Osint For All has many secret domain names? Just kidding, I don’t want to fuzz around any further, or maybe I do? So let’s jump in to the world of Radamsa.
+Radamsa is a fuzzer. In technical terms, it is a test case generator for robustness testing. Typically, it is used to test how well a program could tolerate potentially malicious input. It works by reading files of valid data and generating random outputs every time from them.</description>
+      <content>&lt;p&gt;&amp;ldquo;1337051nT&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;S3rlockedOSINTForall&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;oS$INTFOR@LL&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Did you know that &lt;a href=&#34;https://osintforall.in/&#34;&gt;Osint For All&lt;/a&gt; has many secret domain names? Just
+kidding, I don’t want to fuzz around any further, or maybe I do? So let’s jump in to the world of Radamsa.&lt;/p&gt;
+&lt;p&gt;Radamsa is a fuzzer. In technical terms, it is a test case generator
+for &lt;a href=&#34;https://en.wikipedia.org/wiki/Robustness_testing&#34;&gt;robustness testing&lt;/a&gt;. Typically, it is used to test how well a
+program could tolerate potentially malicious input. It works by
+reading files of valid data and generating random outputs every time
+from them.&lt;/p&gt;
+&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;Prerequisites – gcc, git, make, wget. If you are on Debian based
+system just type:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt install gcc git make wget
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The installation is pretty straight forward as the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/akihe/radamsa.git &amp;amp;&amp;amp; cd radamsa &amp;amp;&amp;amp; make &amp;amp;&amp;amp;
+sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;fuzzing&#34;&gt;Fuzzing&lt;/h1&gt;
+&lt;p&gt;Fuzzing is messing around a program by supplying it with vague
+inputs and see what happens. That’s where Radamsa comes into the
+play. Testers have a brief idea about what should not happen and
+they try to find that out. This referred to as negative testing,
+opposite to integration testing. Developers try to write programs
+which won’t crash, or consume lot of memory, whereas attackers try
+to crash the program and try to exploit it if its vulnerable.&lt;/p&gt;
+&lt;p&gt;Radamsa is more of a black box fuzzer, meaning it doesn’t need
+information about the program or the format of the data. It manages
+to break the data in into interesting ways as it flows through a
+program. Sometimes It could also generate more than one output.&lt;/p&gt;
+&lt;h1 id=&#34;ways-to-fuzz-in-radamsa&#34;&gt;Ways To Fuzz In Radamsa&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data through pipes&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia&amp;quot; | radamsa
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Number mutator&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the above example, Radamsa uses number mutation to change the
+textual numbers with something else.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Multiple Outputs&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using -n flag, multiple number of outputs could be generated.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 8 -n 4
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;To learn more about different options, use the man page.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;man radamsa
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Reading input from standard input&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;bc&lt;/em&gt; is a language that supports arbitrary precision numbers with
+interactive execution of
+statements. xargs is used to execute commands from standard input.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;cat out radamsa!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let’s create a text file named l.txt and radamsit out and see if it
+could give us a random password!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Above is the content of l.txt.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;radamsa l.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After two iterations, radamsa generated a nice little string that
+could be used as a password.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Creating XSS payloads&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fuzzing with different file formats&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As aforementioned, Radamsa could take in almost any file format and
+give us a randomly generated string. So let’s compress l.txt to gzip
+and see if radamsa could give us the output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gzip l.txt
+radamsa l.txt.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;radamsa-as-a-tcp-client&#34;&gt;Radamsa As A TCP Client&lt;/h1&gt;
+&lt;p&gt;Radamsa is also capable of acting as a TCP client/server. So let’s
+start a simple python server see if radamsa could connect to it. And
+also let’s use the same l.txt.gz from the previous section as an
+input file.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python3 -m http.server
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In another tab type the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;radamsa -o 0.0.0.0:8000 -v l.txt.gz
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/10.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/radamsa/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Final Thoughts&lt;/p&gt;
+&lt;p&gt;Tampering with software and then seeing it break and misbehave is a
+delight to many hackers. Fuzzing is an art and Radamsa is one of the
+powerful tools to add to your hacking toolkit. Many CVEs have been
+discovered using Radamsa. Now go install Radamsa and fuzz the world!&lt;/p&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Fuzzing With Good Old Radamsa :: Osint For All</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="&amp;ldquo;1337051nT&amp;rdquo;
+&amp;ldquo;S3rlockedOSINTForall&amp;rdquo;
+&amp;ldquo;oS$INTFOR@LL&amp;rdquo;
+Did you know that Osint For All has many secret domain names? Just kidding, I don’t want to fuzz around any further, or maybe I do? So let’s jump in to the world of Radamsa.
+Radamsa is a fuzzer. In technical terms, it is a test case generator for robustness testing. Typically, it is used to test how well a program could tolerate potentially malicious input. It works by reading files of valid data and generating random outputs every time from them." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/articles/radamsa/radamsa/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="stylesheet" href="/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="Amoghavarsha" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Fuzzing With Good Old Radamsa">
+<meta property="og:description" content="&amp;ldquo;1337051nT&amp;rdquo;
+&amp;ldquo;S3rlockedOSINTForall&amp;rdquo;
+&amp;ldquo;oS$INTFOR@LL&amp;rdquo;
+Did you know that Osint For All has many secret domain names? Just kidding, I don’t want to fuzz around any further, or maybe I do? So let’s jump in to the world of Radamsa.
+Radamsa is a fuzzer. In technical terms, it is a test case generator for robustness testing. Typically, it is used to test how well a program could tolerate potentially malicious input. It works by reading files of valid data and generating random outputs every time from them." />
+<meta property="og:url" content="/articles/radamsa/radamsa/" />
+<meta property="og:site_name" content="Osint For All" />
+
+  
+    <meta property="og:image" content="/img/favicon/green.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="green">
+
+
+<div class="container center headings--one-size">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Osint For All
+  </div>
+</a>
+
+    </div>
+    
+      <div class="menu-trigger">menu</div>
+    
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/articles">Articles</a></li>
+        
+      
+        
+          <li><a href="/ctf">CTF</a></li>
+        
+      
+        
+          <li><a href="/linux">Linux</a></li>
+        
+      
+        
+          <li><a href="/ofag">OFA Guild</a></li>
+        
+      
+        
+          <li><a href="/diy">DIY</a></li>
+        
+      
+        
+          <li><a href="/videos">Videos</a></li>
+        
+      
+        
+          <li><a href="/support">Support Us</a></li>
+        
+      
+        
+          <li><a href="/collaboration">Collaboration</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/articles">Articles</a></li>
+      
+    
+      
+        <li><a href="/ctf">CTF</a></li>
+      
+    
+      
+        <li><a href="/linux">Linux</a></li>
+      
+    
+      
+        <li><a href="/ofag">OFA Guild</a></li>
+      
+    
+      
+        <li><a href="/diy">DIY</a></li>
+      
+    
+      
+        <li><a href="/videos">Videos</a></li>
+      
+    
+      
+        <li><a href="/support">Support Us</a></li>
+      
+    
+      
+        <li><a href="/collaboration">Collaboration</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/articles/radamsa/radamsa/">Fuzzing With Good Old Radamsa</a></h1>
+  <div class="post-meta">
+    
+    
+      <span class="post-author">:: Amoghavarsha</span>
+    
+    
+      <span class="post-reading-time">:: 3 min read (554 words)</span>
+    
+  </div>
+
+  
+  <span class="post-tags">
+    
+    #<a href="/tags/infosec/">infosec</a>&nbsp;
+    
+    #<a href="/tags/fuzzing/">fuzzing</a>&nbsp;
+    
+  </span>
+  
+  
+
+
+  
+
+  <div class="post-content"><div>
+        <p>&ldquo;1337051nT&rdquo;</p>
+<p>&ldquo;S3rlockedOSINTForall&rdquo;</p>
+<p>&ldquo;oS$INTFOR@LL&rdquo;</p>
+<p>Did you know that <a href="https://osintforall.in/">Osint For All</a> has many secret domain names? Just
+kidding, I don’t want to fuzz around any further, or maybe I do? So let’s jump in to the world of Radamsa.</p>
+<p>Radamsa is a fuzzer. In technical terms, it is a test case generator
+for <a href="https://en.wikipedia.org/wiki/Robustness_testing">robustness testing</a>. Typically, it is used to test how well a
+program could tolerate potentially malicious input. It works by
+reading files of valid data and generating random outputs every time
+from them.</p>
+<h1 id="installation">Installation<a href="#installation" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Prerequisites – gcc, git, make, wget. If you are on Debian based
+system just type:</p>
+<pre><code>sudo apt install gcc git make wget
+</code></pre><p>The installation is pretty straight forward as the following.</p>
+<pre><code>git clone https://gitlab.com/akihe/radamsa.git &amp;&amp; cd radamsa &amp;&amp; make &amp;&amp;
+sudo make install
+</code></pre><h1 id="fuzzing">Fuzzing<a href="#fuzzing" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Fuzzing is messing around a program by supplying it with vague
+inputs and see what happens. That’s where Radamsa comes into the
+play. Testers have a brief idea about what should not happen and
+they try to find that out. This referred to as negative testing,
+opposite to integration testing. Developers try to write programs
+which won’t crash, or consume lot of memory, whereas attackers try
+to crash the program and try to exploit it if its vulnerable.</p>
+<p>Radamsa is more of a black box fuzzer, meaning it doesn’t need
+information about the program or the format of the data. It manages
+to break the data in into interesting ways as it flows through a
+program. Sometimes It could also generate more than one output.</p>
+<h1 id="ways-to-fuzz-in-radamsa">Ways To Fuzz In Radamsa<a href="#ways-to-fuzz-in-radamsa" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<ul>
+<li><strong>Data through pipes</strong></li>
+</ul>
+<pre><code>echo &quot;Anaesthesia&quot; | radamsa
+</code></pre><p><img src="/articles/radamsa/1.png" alt="1"></p>
+<ul>
+<li><strong>Number mutator</strong></li>
+</ul>
+<pre><code>echo &quot;Anaesthesia 1337&quot; | radamsa --seed 2
+</code></pre><p><img src="/articles/radamsa/2.png" alt="2"></p>
+<p>In the above example, Radamsa uses number mutation to change the
+textual numbers with something else.</p>
+<ul>
+<li><strong>Multiple Outputs</strong></li>
+</ul>
+<p>Using -n flag, multiple number of outputs could be generated.</p>
+<pre><code>echo &quot;Anaesthesia 1337&quot; | radamsa --seed 8 -n 4
+</code></pre><p><img src="/articles/radamsa/3.png" alt="3"></p>
+<p>To learn more about different options, use the man page.</p>
+<pre><code>man radamsa
+</code></pre><ul>
+<li><strong>Reading input from standard input</strong></li>
+</ul>
+<p><img src="/articles/radamsa/4.png" alt="4"></p>
+<p><em>bc</em> is a language that supports arbitrary precision numbers with
+interactive execution of
+statements. xargs is used to execute commands from standard input.</p>
+<ul>
+<li><strong>cat out radamsa!</strong></li>
+</ul>
+<p>Let’s create a text file named l.txt and radamsit out and see if it
+could give us a random password!</p>
+<p><img src="/articles/radamsa/5.png" alt="5"></p>
+<p>Above is the content of l.txt.</p>
+<pre><code>radamsa l.txt
+</code></pre><p>After two iterations, radamsa generated a nice little string that
+could be used as a password.</p>
+<p><img src="/articles/radamsa/6.png" alt="6"></p>
+<ul>
+<li><strong>Creating XSS payloads</strong></li>
+</ul>
+<p><img src="/articles/radamsa/7.png" alt="7"></p>
+<ul>
+<li><strong>Fuzzing with different file formats</strong></li>
+</ul>
+<p>As aforementioned, Radamsa could take in almost any file format and
+give us a randomly generated string. So let’s compress l.txt to gzip
+and see if radamsa could give us the output.</p>
+<pre><code>gzip l.txt
+radamsa l.txt.gz
+</code></pre><p><img src="/articles/radamsa/8.png" alt="8"></p>
+<h1 id="radamsa-as-a-tcp-client">Radamsa As A TCP Client<a href="#radamsa-as-a-tcp-client" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h1>
+<p>Radamsa is also capable of acting as a TCP client/server. So let’s
+start a simple python server see if radamsa could connect to it. And
+also let’s use the same l.txt.gz from the previous section as an
+input file.</p>
+<pre><code>python3 -m http.server
+</code></pre><p>In another tab type the following.</p>
+<pre><code>radamsa -o 0.0.0.0:8000 -v l.txt.gz
+</code></pre><p>Output</p>
+<p><img src="/articles/radamsa/10.png" alt="10"></p>
+<p><img src="/articles/radamsa/9.png" alt="9"></p>
+<p>Final Thoughts</p>
+<p>Tampering with software and then seeing it break and misbehave is a
+delight to many hackers. Fuzzing is an art and Radamsa is one of the
+powerful tools to add to your hacking toolkit. Many CVEs have been
+discovered using Radamsa. Now go install Radamsa and fuzz the world!</p>
+
+      </div></div>
+
+  
+
+  
+  
+
+  
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2022 <a href="https://osintforall.in">Osint For All</a></span>
+    
+    <span>:: <a href="https://osintforall.in/index.xml">RSS</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+  <script src="/assets/languageSelector.js"></script>
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
