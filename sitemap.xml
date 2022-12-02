@@ -58,6 +58,14 @@
   </url>
   
   <url>
+    <loc>/tags/ctf/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/email/</loc>
+  </url>
+  
+  <url>
     <loc>/articles/email/email/</loc>
   </url>
   
@@ -70,6 +78,10 @@
   </url>
   
   <url>
+    <loc>/tags/geolocation/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/infosec/</loc>
   </url>
   
@@ -78,7 +90,19 @@
   </url>
   
   <url>
+    <loc>/tags/opsec/</loc>
+  </url>
+  
+  <url>
     <loc>/articles/opsec/opsec/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/osint/</loc>
+  </url>
+  
+  <url>
+    <loc>/articles/unsolved1/unsolved1/</loc>
   </url>
   
   <url>
@@ -86,7 +110,15 @@
   </url>
   
   <url>
+    <loc>/tags/steganography/</loc>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/unsolvable/</loc>
   </url>
   
   <url>
