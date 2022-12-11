@@ -194,6 +194,38 @@ powerful! Show some love by sharing and subscribing to &lt;a href=&#34;https://w
     </item>
     
     <item>
+      <title>Case-2: Stampede</title>
+      <link>/ctf/case2/2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/ctf/case2/2/</guid>
+      <description>String Puller: Hello my lovely digital sleuths, our &amp;ldquo;Machine&amp;rdquo; is pointing us towards certain incidents from the past while performing a data analysis on a state sponsored cabal. So far we are not able to understand why it&amp;rsquo;s giving us these results. We tried to look for discrepancies or errors within our system, but surprisingly everything’s in the place and the information is relevant. So these results from the “Machine” should mean something, can you crack this?</description>
+      <content>&lt;p&gt;&lt;img src=&#34;/ctf/case2/s.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;String Puller:&lt;/strong&gt; Hello my lovely digital sleuths, our &amp;ldquo;Machine&amp;rdquo; is pointing us towards certain incidents from the past while performing a data analysis on a state sponsored cabal. So far we are not able to understand why it&amp;rsquo;s giving us these results. We tried to look for discrepancies or errors within our system, but surprisingly everything’s in the place and the information is relevant. So these results from the “Machine” should mean something, can you crack this?&lt;/p&gt;
+&lt;p&gt;The results that we got are as follows.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;1991: Orkney Stadium Disaster&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2001: In Ghana, approximately 126 people were killed in a stampede at Accra’s main soccer stadium when police fired tear gas at rioting fans in one of Africa’s worst soccer disasters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2005: Approximately 1,005 people die in Iraq when Shi’ites stampede off a bridge over the Tigris river in Baghdad.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2012: Port Said Stadium Disaster.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2022: Riot at Indonesia soccer match kills 129.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Good luck hunters.&lt;/p&gt;
+</content>
+    </item>
+    
+    <item>
       <title>Email Investigations – Accessibility And Limitations.</title>
       <link>/articles/email/email/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
