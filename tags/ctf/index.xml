@@ -48,7 +48,7 @@ I started this tradition of making Twitter threads during TraceLabs’s CTF abou
 &lt;/ol&gt;
 &lt;h1 id=&#34;faq&#34;&gt;FAQ&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;What if I can’t create sock puppet accounts due to territorial restrictions and I can’t/don’t want to spend money on buying burners or temporary sim cards?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&#39; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&amp;rsquo; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Some Privacy Addons.&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User Agent Switcher&lt;/li&gt;
@@ -115,14 +115,14 @@ files, it supports JPEG, BMP, WAV and AU formats.&lt;/p&gt;
 &lt;p&gt;Let’s create a text file named secret.txt and try to hide it inside
 an image.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;steghide embed -cf yoda.jpg -ef secret.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;steghide embed -cf yoda.jpg -ef secret.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here -cf is cover file and -ef is embed file. The caveat is, you
 should make sure your cover file is larger than your embed file,
 that’s a no brainer.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s delete the secret.txt and see if we can extract it back
 from the cover file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;steghide extract -sf yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;steghide extract -sf yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here the -sf is stego file.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
@@ -140,11 +140,11 @@ file. And you have to match or put printable strings together in
 order to solve the challenge.&lt;/p&gt;
 &lt;p&gt;If you cat out the file, you will end up with gibberish characters
 printed out on to your screen.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cat yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Whereas, if you use strings, you’ll get a bunch of strings with
 printable characters.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;strings yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;strings yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Among them, one of it might be your password or flag or a clue to
 the next stage.&lt;/p&gt;
@@ -155,7 +155,7 @@ embedding secret messages, exif data could provide some juicy
 information about the image, such as, geo coordinates, camera model,
 creation date and so on. You can use simple tools like gThumb or
 GIMP to edit medtadata.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;exiftool yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;exiftool yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;binwalk&#34;&gt;Binwalk&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.kali.org/tools/binwalk/&#34;&gt;Binwalk&lt;/a&gt; is a tool for searching binary images for embedded files and
@@ -173,7 +173,7 @@ folder.&lt;/p&gt;
 &lt;h1 id=&#34;wavsteg&#34;&gt;Wavsteg&lt;/h1&gt;
 &lt;p&gt;WavSteg is a tool written in Python, which can hide data in files
 with a wav format.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/13.png&#34; alt=&#34;13&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/14.png&#34; alt=&#34;14&#34;&gt;&lt;/p&gt;
 &lt;p&gt;While extracting data, you have to specify the exact size of

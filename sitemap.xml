@@ -1,132 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/articles/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/collaboration/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ctf/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/diy/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/linux/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ofag/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/support/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/videos/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/linux/aib/aib/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ctf/case1/1/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/ctf/case2/2/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ctf/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/email/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/email/email/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/fuzzing/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/radamsa/radamsa/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/geolocation/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/infosec/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/opsec/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/opsec/opsec/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/osint/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/unsolved1/unsolved1/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/steganography/steganography/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/steganography/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/unsolvable/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/articles/geo/geo/</loc>
   </url>
-  
 </urlset>

@@ -30,9 +30,9 @@ from them.&lt;/p&gt;
 &lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
 &lt;p&gt;Prerequisites – gcc, git, make, wget. If you are on Debian based
 system just type:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install gcc git make wget
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install gcc git make wget
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The installation is pretty straight forward as the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/akihe/radamsa.git &amp;amp;&amp;amp; cd radamsa &amp;amp;&amp;amp; make &amp;amp;&amp;amp;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://gitlab.com/akihe/radamsa.git &amp;amp;&amp;amp; cd radamsa &amp;amp;&amp;amp; make &amp;amp;&amp;amp;
 sudo make install
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;fuzzing&#34;&gt;Fuzzing&lt;/h1&gt;
 &lt;p&gt;Fuzzing is messing around a program by supplying it with vague
@@ -50,12 +50,12 @@ program. Sometimes It could also generate more than one output.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data through pipes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia&amp;quot; | radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia&amp;#34; | radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Number mutator&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above example, Radamsa uses number mutation to change the
 textual numbers with something else.&lt;/p&gt;
@@ -63,10 +63,10 @@ textual numbers with something else.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Multiple Outputs&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Using -n flag, multiple number of outputs could be generated.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 8 -n 4
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 8 -n 4
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To learn more about different options, use the man page.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;man radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;man radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Reading input from standard input&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -81,7 +81,7 @@ statements. xargs is used to execute commands from standard input.&lt;/p&gt;
 could give us a random password!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Above is the content of l.txt.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;radamsa l.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;radamsa l.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After two iterations, radamsa generated a nice little string that
 could be used as a password.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
@@ -95,7 +95,7 @@ could be used as a password.&lt;/p&gt;
 &lt;p&gt;As aforementioned, Radamsa could take in almost any file format and
 give us a randomly generated string. So let’s compress l.txt to gzip
 and see if radamsa could give us the output.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gzip l.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gzip l.txt
 radamsa l.txt.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;radamsa-as-a-tcp-client&#34;&gt;Radamsa As A TCP Client&lt;/h1&gt;
@@ -103,9 +103,9 @@ radamsa l.txt.gz
 start a simple python server see if radamsa could connect to it. And
 also let’s use the same l.txt.gz from the previous section as an
 input file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python3 -m http.server
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -m http.server
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In another tab type the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;radamsa -o 0.0.0.0:8000 -v l.txt.gz
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;radamsa -o 0.0.0.0:8000 -v l.txt.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/10.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;

@@ -28,8 +28,8 @@ piece of data or value.&lt;/p&gt;
 &lt;p&gt;You might have heard the term “place holder” and that’s exactly what
 a variable is. So how to store and retrieve information through
 variables?&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;place=&amp;quot;World&amp;quot;
-echo &amp;quot;Hello $place&amp;quot; 
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;place=&amp;#34;World&amp;#34;
+echo &amp;#34;Hello $place&amp;#34; 
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above code snippet, place is a variable and World is the
 value assigned to the variable. In the next line, the value assigned to the variable is retrieved through echo command. As
@@ -38,8 +38,8 @@ bash. An important thing to note here is, “=” doesn’t mean variable
 name has a constant value, it just means that a value is assigned to
 a variable name.&lt;/p&gt;
 &lt;p&gt;Now the value of variable place could be varied.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;place=&amp;quot;Mars&amp;quot;
-echo &amp;quot;Hello $place&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;place=&amp;#34;Mars&amp;#34;
+echo &amp;#34;Hello $place&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now the value of variable has changed to Mars from World. Imagine a
 box where you could place an item and replace that item whenever you
@@ -55,7 +55,7 @@ it could hold more than one value.
 A typical array consists of an array name and an index. Each index
 number associates with an element in the array.
 Lets see how to create an array.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;movies=(&#39;Primer&#39; &#39;Inception&#39; &#39;Enemy&#39; &#39;Tenet&#39;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;movies=(&amp;#39;Primer&amp;#39; &amp;#39;Inception&amp;#39; &amp;#39;Enemy&amp;#39; &amp;#39;Tenet&amp;#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Two things to keep in mind. Unlike other programming languages, bash
 arrays are not led by commas after every element but spaces. There
 is no space after array name(i.e, movies=), it’s followed by “=”. If
@@ -83,14 +83,14 @@ Enemy.&lt;/p&gt;
 &lt;p&gt;You could also assign elements to the array explicitly in three
 ways: Subscript Assignment, Index Assignment and assignment by name.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Subscript Assignment&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;movies=([4]=&#39;Ten cloverfield lane&#39; [5]=&#39;Timecrimes&#39;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;movies=([4]=&amp;#39;Ten cloverfield lane&amp;#39; [5]=&amp;#39;Timecrimes&amp;#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Index Assignment&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;movies[1]=&#39;Vanilla Sky&#39;
-movies[2]=&#39;Mr.Nobody&#39;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;movies[1]=&amp;#39;Vanilla Sky&amp;#39;
+movies[2]=&amp;#39;Mr.Nobody&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/10.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Assignment by names&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;movies[zero]=&#39;Magnolia&#39;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;movies[zero]=&amp;#39;Magnolia&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/11.png&#34; alt=&#34;11&#34;&gt;&lt;/p&gt;
 &lt;p&gt;What if you want to print the elements from one particular index to
 another?&lt;/p&gt;
@@ -101,11 +101,11 @@ from index 1 to index 3.&lt;/p&gt;
 &lt;p&gt;Here you are telling the array that from all its elements(@), start
 from index 1 and print all the following elements.&lt;/p&gt;
 &lt;p&gt;What if, you want to access the index numbers?&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;${!movies[@]}&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;${!movies[@]}&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/14.png&#34; alt=&#34;14&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The “!” symbol before array name helps to retrieve indices.&lt;/p&gt;
 &lt;p&gt;What if you want to see how many elements are there in an array?&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;${#movies[@]}&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;${#movies[@]}&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/15.png&#34; alt=&#34;15&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The “#” symbol before array name helps to retrieve number of
 elements.&lt;/p&gt;
@@ -120,10 +120,10 @@ manually but here’s a easy way to do it.&lt;/p&gt;
 above example, &lt;em&gt;seq&lt;/em&gt; is placed in between ` `.&lt;/p&gt;
 &lt;p&gt;Now lets try to write a simple shell script from the above
 learnings.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/linux/AIB/usr/linux/AIB/bin/linux/AIB/bash
-tvshows=(&#39;Mr.Robot&#39; &#39;Homeland&#39; &#39;The Americans&#39; &#39;Death Note&#39; &#39;Erased&#39;)
-for a in &amp;quot;${!tvshows[@]}&amp;quot;; do
-printf &amp;quot;${tvshows[$a]} has an index number of $a\n&amp;quot;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#!/linux/AIB/usr/linux/AIB/bin/linux/AIB/bash
+tvshows=(&amp;#39;Mr.Robot&amp;#39; &amp;#39;Homeland&amp;#39; &amp;#39;The Americans&amp;#39; &amp;#39;Death Note&amp;#39; &amp;#39;Erased&amp;#39;)
+for a in &amp;#34;${!tvshows[@]}&amp;#34;; do
+printf &amp;#34;${tvshows[$a]} has an index number of $a\n&amp;#34;
 done
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Let’s save the code as lp.sh. Next lets make it executable – chmod
 +x lp.sh.&lt;/p&gt;
@@ -131,9 +131,9 @@ done
 &lt;p&gt;When the program is executed, you get the above result.&lt;/p&gt;
 &lt;h1 id=&#34;array-modification&#34;&gt;Array Modification&lt;/h1&gt;
 &lt;p&gt;Lets create a new array.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;names=(&#39;Luther&#39; &#39;Ambrose&#39; &#39;Reddington&#39; &#39;Mare&#39;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;names=(&amp;#39;Luther&amp;#39; &amp;#39;Ambrose&amp;#39; &amp;#39;Reddington&amp;#39; &amp;#39;Mare&amp;#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;To change the value of index 2 you could do the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;names[2]=’Carrie’
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;names[2]=’Carrie’
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/19.png&#34; alt=&#34;19&#34;&gt;&lt;/p&gt;
 &lt;p&gt;What if, you want to append values by adding more elements to the
 array?&lt;/p&gt;
@@ -146,10 +146,10 @@ array?&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/linux/AIB/23.png&#34; alt=&#34;23&#34;&gt;&lt;/p&gt;
 &lt;p&gt;What if you want to merge two arrays?&lt;/p&gt;
 &lt;p&gt;Lets create another array.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;surnames=(&#39;Dexter&#39; &#39;Hannibal&#39; &#39;Broody&#39; &#39;Dan&#39; &#39;Gordan&#39; &#39;Steve&#39;)
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;surnames=(&amp;#39;Dexter&amp;#39; &amp;#39;Hannibal&amp;#39; &amp;#39;Broody&amp;#39; &amp;#39;Dan&amp;#39; &amp;#39;Gordan&amp;#39; &amp;#39;Steve&amp;#39;)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/24.png&#34; alt=&#34;24&#34;&gt;&lt;/p&gt;
 &lt;p&gt;What if you want to delete an array?&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;unset &amp;lt;array_name&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;unset &amp;lt;array_name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/linux/AIB/25.png&#34; alt=&#34;25&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;associative-array&#34;&gt;Associative Array&lt;/h1&gt;
 &lt;p&gt;An associative array is an array that stores string value as an
@@ -157,7 +157,7 @@ index. It could be declared and used in a bash script. This feature
 was added in bash 4. To be sure, just check your bash version.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/linux/AIB/26.png&#34; alt=&#34;26&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Declaring an associative array is easy, here’s the syntax.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;declare -A &amp;lt;array_name&amp;gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;declare -A &amp;lt;array_name&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Lets declare an associative array and initialize some elements.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/linux/AIB/27.png&#34; alt=&#34;27&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Like in normal array, if you want to access an element of the array,
@@ -175,7 +175,7 @@ alphabetic order?&lt;/p&gt;
 &lt;p&gt;To reverse it, use –reverse flag.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/linux/AIB/32.png&#34; alt=&#34;32&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Well that’s it for today. Do practice arrays; because they are
-powerful! Show some love by sharing and subscribing to &lt;a href=&#34;https://www.youtube.com/channel/UCLi7utjkBxAYPtVQhTuiZ2Q&#34;&gt;Linux For Love &amp;amp; Passion&lt;/a&gt;&lt;/p&gt;
+powerful! Show some love by sharing and subscribing to &lt;a href=&#34;https://www.youtube.com/channel/UCLi7utjkBxAYPtVQhTuiZ2Q&#34;&gt;Linux For All&lt;/a&gt;&lt;/p&gt;
 </content>
     </item>
     
@@ -372,9 +372,9 @@ from them.&lt;/p&gt;
 &lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
 &lt;p&gt;Prerequisites – gcc, git, make, wget. If you are on Debian based
 system just type:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt install gcc git make wget
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sudo apt install gcc git make wget
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The installation is pretty straight forward as the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git clone https://gitlab.com/akihe/radamsa.git &amp;amp;&amp;amp; cd radamsa &amp;amp;&amp;amp; make &amp;amp;&amp;amp;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git clone https://gitlab.com/akihe/radamsa.git &amp;amp;&amp;amp; cd radamsa &amp;amp;&amp;amp; make &amp;amp;&amp;amp;
 sudo make install
 &lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;fuzzing&#34;&gt;Fuzzing&lt;/h1&gt;
 &lt;p&gt;Fuzzing is messing around a program by supplying it with vague
@@ -392,12 +392,12 @@ program. Sometimes It could also generate more than one output.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data through pipes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia&amp;quot; | radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia&amp;#34; | radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Number mutator&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above example, Radamsa uses number mutation to change the
 textual numbers with something else.&lt;/p&gt;
@@ -405,10 +405,10 @@ textual numbers with something else.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Multiple Outputs&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Using -n flag, multiple number of outputs could be generated.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 8 -n 4
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 8 -n 4
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To learn more about different options, use the man page.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;man radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;man radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Reading input from standard input&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -423,7 +423,7 @@ statements. xargs is used to execute commands from standard input.&lt;/p&gt;
 could give us a random password!&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/5.png&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Above is the content of l.txt.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;radamsa l.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;radamsa l.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;After two iterations, radamsa generated a nice little string that
 could be used as a password.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/6.png&#34; alt=&#34;6&#34;&gt;&lt;/p&gt;
@@ -437,7 +437,7 @@ could be used as a password.&lt;/p&gt;
 &lt;p&gt;As aforementioned, Radamsa could take in almost any file format and
 give us a randomly generated string. So let’s compress l.txt to gzip
 and see if radamsa could give us the output.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gzip l.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gzip l.txt
 radamsa l.txt.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;radamsa-as-a-tcp-client&#34;&gt;Radamsa As A TCP Client&lt;/h1&gt;
@@ -445,9 +445,9 @@ radamsa l.txt.gz
 start a simple python server see if radamsa could connect to it. And
 also let’s use the same l.txt.gz from the previous section as an
 input file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python3 -m http.server
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;python3 -m http.server
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In another tab type the following.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;radamsa -o 0.0.0.0:8000 -v l.txt.gz
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;radamsa -o 0.0.0.0:8000 -v l.txt.gz
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Output&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/10.png&#34; alt=&#34;10&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/radamsa/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
@@ -501,7 +501,7 @@ I started this tradition of making Twitter threads during TraceLabs’s CTF abou
 &lt;/ol&gt;
 &lt;h1 id=&#34;faq&#34;&gt;FAQ&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;What if I can’t create sock puppet accounts due to territorial restrictions and I can’t/don’t want to spend money on buying burners or temporary sim cards?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&#39; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&amp;rsquo; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Some Privacy Addons.&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User Agent Switcher&lt;/li&gt;
@@ -568,14 +568,14 @@ files, it supports JPEG, BMP, WAV and AU formats.&lt;/p&gt;
 &lt;p&gt;Let’s create a text file named secret.txt and try to hide it inside
 an image.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;steghide embed -cf yoda.jpg -ef secret.txt
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;steghide embed -cf yoda.jpg -ef secret.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Here -cf is cover file and -ef is embed file. The caveat is, you
 should make sure your cover file is larger than your embed file,
 that’s a no brainer.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Now let’s delete the secret.txt and see if we can extract it back
 from the cover file.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;steghide extract -sf yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;steghide extract -sf yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Here the -sf is stego file.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/4.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
@@ -593,11 +593,11 @@ file. And you have to match or put printable strings together in
 order to solve the challenge.&lt;/p&gt;
 &lt;p&gt;If you cat out the file, you will end up with gibberish characters
 printed out on to your screen.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cat yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cat yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/7.png&#34; alt=&#34;7&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Whereas, if you use strings, you’ll get a bunch of strings with
 printable characters.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;strings yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;strings yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/8.png&#34; alt=&#34;8&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Among them, one of it might be your password or flag or a clue to
 the next stage.&lt;/p&gt;
@@ -608,7 +608,7 @@ embedding secret messages, exif data could provide some juicy
 information about the image, such as, geo coordinates, camera model,
 creation date and so on. You can use simple tools like gThumb or
 GIMP to edit medtadata.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;exiftool yoda.jpg
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;exiftool yoda.jpg
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/9.png&#34; alt=&#34;9&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;binwalk&#34;&gt;Binwalk&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.kali.org/tools/binwalk/&#34;&gt;Binwalk&lt;/a&gt; is a tool for searching binary images for embedded files and
@@ -626,7 +626,7 @@ folder.&lt;/p&gt;
 &lt;h1 id=&#34;wavsteg&#34;&gt;Wavsteg&lt;/h1&gt;
 &lt;p&gt;WavSteg is a tool written in Python, which can hide data in files
 with a wav format.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;stegolsb wavsteg -h -i piano.wav -s secret.txt -o stego.wav -n 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/steganography/13.png&#34; alt=&#34;13&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/steganography/14.png&#34; alt=&#34;14&#34;&gt;&lt;/p&gt;
 &lt;p&gt;While extracting data, you have to specify the exact size of
@@ -672,7 +672,7 @@ facilitate steganography. Some of them are in the following.&lt;/p&gt;
 &lt;h1 id=&#34;anyone-can-geolocate---love-your-culture&#34;&gt;Anyone Can Geolocate - Love Your Culture&lt;/h1&gt;
 &lt;p&gt;Probably it’s easier for someone who grew up on the shoulders of Silicon Valley to geolocate Apple Park or Meta’s headquarters than someone sitting in Alaska. Likewise, your country/state/district/region/area is your strength. Because you know them well, if you don’t know, stop reading this article, get out and explore! I’m not saying that you’ll be able to record everything in your visual memory, but at least you’ll have an idea where to look further if it turns out to be wrong. You are constantly getting influenced by your surroundings and culture, whether it’s social media, local news channels, news papers, something that your friend posted on Instagram when she visited a nearby city etc., could be helpful for you someday to gather some information or find a clue about your region. So keep your eyes &amp;amp; ears open.&lt;/p&gt;
 &lt;h1 id=&#34;verification-is-hard&#34;&gt;Verification Is Hard&lt;/h1&gt;
-&lt;p&gt;Confirming images, dates, time and verifying locations is not always bed of roses, even if you are a pro. You have to admit your limitations, you cannot strongly remember everything. Sometimes, good journalists&#39; spend several nights/months to verify facts and sometimes that might go wrong as well! Beware of mirages, there could be similar looking locations but might not be the exact location that you would be looking for.&lt;/p&gt;
+&lt;p&gt;Confirming images, dates, time and verifying locations is not always bed of roses, even if you are a pro. You have to admit your limitations, you cannot strongly remember everything. Sometimes, good journalists&amp;rsquo; spend several nights/months to verify facts and sometimes that might go wrong as well! Beware of mirages, there could be similar looking locations but might not be the exact location that you would be looking for.&lt;/p&gt;
 &lt;h1 id=&#34;limitations&#34;&gt;Limitations&lt;/h1&gt;
 &lt;p&gt;What if I asked you what will happen to Zhouzhuang after 50 years, will you be able to answer without Googling or knowing anything about it? Probably not.
 So this brings us to the limitations of geolocation challenges. You can only get an opportunity to collate the intelligence of what&amp;rsquo;s already there or what’s already known. If Google maps removes some areas from its database, you&amp;rsquo;ll probably never know how to or where to get clear visual information about those areas. So the companies/spy agencies that have control over hoarding data and making them available for the public to hoard more data are a deadly combination of convenience and crookedness. And depending on the country that you live, categorically, developed nations would have more discoverable areas, developing countries a bit less and underdeveloped a bit lesser relatively.&lt;/p&gt;
