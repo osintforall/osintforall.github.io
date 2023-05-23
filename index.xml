@@ -695,6 +695,7 @@ facilitate steganography. Some of them are in the following.&lt;/p&gt;
 &lt;p&gt;As we can see in the image below, when we search for a user named &lt;em&gt;john&lt;/em&gt; we got their previous records.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/irc/8.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Luckily, in our example, we got some other extra information about the user &lt;em&gt;john&lt;/em&gt; apart from their previous connections. Here we can see a new IP address that &lt;em&gt;john&lt;/em&gt; could have connected, and we can also presume that &lt;em&gt;john&lt;/em&gt; might be using &lt;strong&gt;Thunderbird&lt;/strong&gt; email client. These cannot be confirmed unless we do a physical forensic test, which is not in the interest of this guide, but with intuition there is a strong chance that they might be using Thunderbird.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/9.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;3.LIST: The LIST command provides an overview of channels on the server, along with their topics and the number of users in each channel.&lt;/p&gt;
 &lt;p&gt;As we can see in the images below, we have listed all the channels in the Libera chat server (A-Z), we use &lt;em&gt;-y&lt;/em&gt; flag in Irssi to confirm to a huge list of all channels in the server.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;/articles/irc/10.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
