@@ -94,7 +94,7 @@
 &lt;p&gt;&lt;img src=&#34;/articles/irc/25.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;p&gt;The CTCP TIME command requests the local time of a user&amp;rsquo;s IRC client.&lt;/p&gt;
 &lt;h1 id=&#34;some-interesting-ctcp-commands&#34;&gt;Some Interesting CTCP Commands&lt;/h1&gt;
-&lt;p&gt;There are some CTCP commands that are interesting, perhaps they don’t necessarily guarantee the result. This is because, as we are in 2023, IRC clients have improved a lot, and some old school IRC commands have become obsolete. But, we’ll never know what we can get, so that’s why I’m going to explain some CTCP commands that are worth trying.&lt;/p&gt;
+&lt;p&gt;There are some CTCP commands that are interesting, perhaps they don’t necessarily guarantee the result. This is because, overtime, IRC clients have improved a lot, and some old school IRC commands have become obsolete. But, we’ll never know what we can get, so that’s why I’m going to explain some CTCP commands that are worth trying.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;CTCP PING: The CTCP PING command measures the round-trip time (RTT) between our client and the target user&amp;rsquo;s client, providing an indication of network latency.&lt;/li&gt;
 &lt;/ul&gt;
