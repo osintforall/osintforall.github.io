@@ -50,12 +50,12 @@ program. Sometimes It could also generate more than one output.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data through pipes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia&amp;#34; | radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia&amp;quot; | radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Number mutator&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above example, Radamsa uses number mutation to change the
 textual numbers with something else.&lt;/p&gt;
@@ -63,7 +63,7 @@ textual numbers with something else.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Multiple Outputs&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Using -n flag, multiple number of outputs could be generated.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 8 -n 4
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 8 -n 4
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To learn more about different options, use the man page.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;man radamsa
@@ -159,7 +159,7 @@ I started this tradition of making Twitter threads during TraceLabs’s CTF abou
 &lt;/ol&gt;
 &lt;h1 id=&#34;faq&#34;&gt;FAQ&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;What if I can’t create sock puppet accounts due to territorial restrictions and I can’t/don’t want to spend money on buying burners or temporary sim cards?&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&amp;rsquo; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ans:&lt;/strong&gt; If the CTF is designed in a way, such that, you only need to verify the details of contestants&#39; submissions, then, you don’t need sock puppet accounts; simply follow the instructions from &lt;strong&gt;Method 1&lt;/strong&gt; or use the &lt;strong&gt;Tor browser&lt;/strong&gt; to do so. This applies only if the submissions are from social media platforms such as Facebook, Twitter, Instagram, LinkedIn, and so on; where you can view the content from a “shared link” unless it’s public. If any of the social media sites require you to &lt;strong&gt;login/signup&lt;/strong&gt; for a second post from the same window, simply right-click on the link and open it in a &lt;strong&gt;private window&lt;/strong&gt;, which will fool the link into thinking that you are a different person/session accessing the link.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Some Privacy Addons.&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;User Agent Switcher&lt;/li&gt;

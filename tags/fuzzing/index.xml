@@ -50,12 +50,12 @@ program. Sometimes It could also generate more than one output.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data through pipes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia&amp;#34; | radamsa
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia&amp;quot; | radamsa
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Number mutator&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 2
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 2
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/2.png&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;p&gt;In the above example, Radamsa uses number mutation to change the
 textual numbers with something else.&lt;/p&gt;
@@ -63,7 +63,7 @@ textual numbers with something else.&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;Multiple Outputs&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Using -n flag, multiple number of outputs could be generated.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;#34;Anaesthesia 1337&amp;#34; | radamsa --seed 8 -n 4
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;echo &amp;quot;Anaesthesia 1337&amp;quot; | radamsa --seed 8 -n 4
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;/articles/radamsa/3.png&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;p&gt;To learn more about different options, use the man page.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;man radamsa

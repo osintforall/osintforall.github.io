@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>irc on Osint For All</title>
+    <link>/tags/irc/</link>
+    <description>Recent content in irc on Osint For All</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/tags/irc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unveiling the Power of IRC: Ultimate Guide to Information Gathering</title>
+      <link>/articles/irc/irc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/articles/irc/irc/</guid>
+      <description>Internet Relay Chat (IRC) has long been a trusted platform for real-time text-based communication. But IRC is not just about chat; it offers a rich array of commands that can be harnessed for information gathering and efficient communication. In this comprehensive guide, we will explore the most valuable IRC commands for information gathering, along with the capabilities of the CTCP (Client-to-Client Protocol) commands. Prepare to embark on a journey of discovery as we unlock the hidden potential of IRC.</description>
+      <content>&lt;p&gt;Internet Relay Chat (IRC) has long been a trusted platform for real-time text-based communication. But IRC is not just about chat; it offers a rich array of commands that can be harnessed for information gathering and efficient communication. In this comprehensive guide, we will explore the most valuable IRC commands for information gathering, along with the capabilities of the CTCP (Client-to-Client Protocol) commands. Prepare to embark on a journey of discovery as we unlock the hidden potential of IRC.&lt;/p&gt;
+&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
+&lt;p&gt;Before we move on to the nitty-gritty, let&amp;rsquo;s learn some basics about IRC. What&amp;rsquo;s IRC? Is it like an app? Or a website?&lt;/p&gt;
+&lt;p&gt;At the core of IRC are servers, which host the IRC networks. These servers act as hubs, connecting users from different locations and facilitating communication between them. Each IRC network consists of multiple servers linked together, forming a vast network of interconnected nodes. Generally, in the context of IRC, the names &amp;lsquo;IRC servers&amp;rsquo; and &amp;lsquo;IRC Networks&amp;rsquo; are used interchangeably.&lt;/p&gt;
+&lt;p&gt;Users connect to an IRC server using an IRC client (Irssi, Hexchat), which is software that allows individuals to interact with the IRC network. The client provides a user-friendly interface through which users can join channels, send messages, and participate in discussions.&lt;/p&gt;
+&lt;p&gt;Channels are virtual spaces within the IRC network where users can gather and engage in conversations on specific topics. Channels are denoted by a &amp;ldquo;#&amp;rdquo; symbol followed by a unique name, such as &amp;ldquo;#osintforall&amp;rdquo; or &amp;ldquo;#programming&amp;rdquo;. Users can join channels of interest to connect with like-minded individuals, share knowledge, and discuss various subjects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/server1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When users join a channel, they can send messages to the channel that are visible to all participants. These messages can be seen and responded to in real-time. Users can also send private messages to other individuals on the network, allowing for one-on-one conversations.&lt;/p&gt;
+&lt;h1 id=&#34;analogy&#34;&gt;Analogy&lt;/h1&gt;
+&lt;p&gt;Try to imagine Discord “servers”, where we join a server, for example, Osint For All server, and we can join individual channels there. Even though we can do a lot of other things on Discord compared to IRC, the idea behind it is somewhat the same.&lt;/p&gt;
+&lt;p&gt;One advantage of IRC over Discord is that we don&amp;rsquo;t necessarily need to register to a server and join channels, whereas in Discord, we need to create an account first, and then we can join and chat on different servers.&lt;/p&gt;
+&lt;h1 id=&#34;irc-clients&#34;&gt;IRC Clients&lt;/h1&gt;
+&lt;p&gt;An IRC client is a software application that allows users to connect to and interact with IRC servers. It serves as the interface between the user and the IRC network, enabling them to participate in real-time text-based conversations, join channels, and perform various actions.&lt;/p&gt;
+&lt;p&gt;IRC clients come in different forms, including standalone desktop applications, web-based clients, and command line clients. They provide a user-friendly interface that simplifies the process of connecting to an IRC server and navigating the network.&lt;/p&gt;
+&lt;p&gt;The recommendations are as follows.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Irssi (Command line)&lt;/li&gt;
+&lt;li&gt;Hexchat (GUI)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/clients.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;setting-the-ground-opsec-tips&#34;&gt;Setting The Ground (Opsec Tips)&lt;/h1&gt;
+&lt;p&gt;For demonstration purposes, we&amp;rsquo;ll be using Irssi client and connecting to Libera Chat network.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/1.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In the above image, we have connected to Libera Chat server/network. And the text enclosed in the red rectangle is the nickname which was set previously.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/2.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In order to conceal ourselves, we can change, &lt;em&gt;real_name&lt;/em&gt;, &lt;em&gt;hostname&lt;/em&gt; and &lt;em&gt;nickname&lt;/em&gt; in Irssi by using /set command.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/3.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As we can see from the above image, we have changed our &lt;em&gt;real_name&lt;/em&gt;, &lt;em&gt;hostname&lt;/em&gt; and &lt;em&gt;nickname&lt;/em&gt; to &lt;strong&gt;Ultrachad&lt;/strong&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;information-gathering-commands&#34;&gt;Information Gathering Commands&lt;/h1&gt;
+&lt;p&gt;1.WHOIS: The WHOIS command allows us to retrieve detailed information about a specific user, including their nickname, username, hostname, real name, server information, and channels they are currently in.&lt;/p&gt;
+&lt;p&gt;Usage: /whois &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/4.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;As we can see from the above image, using /whois, we have gathered some basic information about a user named amoghavarsha(&lt;a href=&#34;https://twitter.com/TheAmoghavarsha&#34;&gt;That&amp;rsquo;s me!&lt;/a&gt;). And remember, we haven&amp;rsquo;t logged in as a user yet, but we can still just connect to a server and gather basic information about users.&lt;/p&gt;
+&lt;p&gt;In order to log in, we can use &lt;em&gt;/msg nickserv identify amoghavarsha &lt;!-- raw HTML omitted --&gt;&lt;/em&gt; command as shown in the image below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/5.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Once we login, we can also use &lt;em&gt;cloak&lt;/em&gt; provided by Libera chat, by joining #libera-cloak and typing !cloakme. Cloaks/Cloaking helps us to conceal our IP address and replace that with something random depending on the servers/networks.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/6.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2.WHOWAS: The WHOWAS command allows us to retrieve detailed information about a specific user, including their nickname, username, hostname, real name, server information that they might have had previously.&lt;/p&gt;
+&lt;p&gt;As we can see in the image below, when we search for a user named &lt;em&gt;john&lt;/em&gt; we got their previous records.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/8.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Luckily, in our example, we got some other extra information about the user &lt;em&gt;john&lt;/em&gt; apart from their previous connections. Here we can see a new IP address that &lt;em&gt;john&lt;/em&gt; could have connected, and we can also presume that &lt;em&gt;john&lt;/em&gt; might be using &lt;strong&gt;Thunderbird&lt;/strong&gt; email client. These cannot be confirmed unless we do a physical forensic test, which is not in the interest of this guide, but with intuition there is a strong chance that they might be using Thunderbird.&lt;/p&gt;
+&lt;p&gt;3.LIST: The LIST command provides an overview of channels on the server, along with their topics and the number of users in each channel.&lt;/p&gt;
+&lt;p&gt;As we can see in the images below, we have listed all the channels in the Libera chat server (A-Z), we use &lt;em&gt;-y&lt;/em&gt; flag in Irssi to confirm to a huge list of all channels in the server.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/10.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/11.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4.JOIN: The JOIN command enables us to join a specific channel.&lt;/p&gt;
+&lt;p&gt;As seen in the image below, let&amp;rsquo;s join #python channel.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/12.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s something interesting to notice, when we joined the channel, we can see that our IP address is hidden, and it&amp;rsquo;s replaced instead &lt;em&gt;user/Amoghavarsha&lt;/em&gt;. So these are some advantages of having an account and also cloaking that we discussed earlier.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/13.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5.NAMES: The NAMES command gives us the (nick)names of all the users in a group.&lt;/p&gt;
+&lt;p&gt;As we can see in the image below, we got a lot of names from the python group. Joining certain groups to investigate a target is one of the best ways to track their activities. Having an insight/intuition about target&amp;rsquo;s preferred channels is useful. It could be guessed by tracking their online activities on social media platforms.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/14.png&#34; alt=&#34;1&#34;&gt;
+&lt;img src=&#34;/articles/irc/15.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6.WHO: The WHO command is similar to WHOIS, but in brief.&lt;/p&gt;
+&lt;p&gt;As we can see in the image below, we just searched for a random user from #python group nicked &lt;em&gt;lack&lt;/em&gt;, in order to get basic information. And luckily we got their presumably the real name (Jim Ramsay) and their email (&lt;a href=&#34;mailto:i.am@jimramsay.com&#34;&gt;i.am@jimramsay.com&lt;/a&gt;), in turn their website (jimramsay.com).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/16.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Furthermore, when we did check for /WHOIS and /WHOWAS records, we got some juicy information such as their last login and the channels that they are active.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/17.png&#34; alt=&#34;1&#34;&gt;
+&lt;img src=&#34;/articles/irc/16.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;7.MODE: The MODE command displays or changes the mode of a user or channel, allowing control over various aspects such as channel moderation, user permissions, and channel settings.&lt;/p&gt;
+&lt;p&gt;So here in the image below, when we check the MODE of python channel, we got some basic information such as date of the channel creation, the person who set the topic and so on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/18.png&#34; alt=&#34;1&#34;&gt;
+&lt;img src=&#34;/articles/irc/19.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;8.MOTD: The MOTD command displays the &amp;lsquo;Message of the day&amp;rsquo; on the server, generally set by the admin.&lt;/p&gt;
+&lt;p&gt;In the image below, we can see the MOTD of Libera Chat.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/24.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;niche-area&#34;&gt;Niche Area&lt;/h1&gt;
+&lt;p&gt;As we have covered some basic information gathering commands, let&amp;rsquo;s try to look at another command and its variations.&lt;/p&gt;
+&lt;p&gt;9.CTCP: CTCP stands for &amp;lsquo;Client to client protocol&amp;rsquo;, which tries to provide some basic information about target&amp;rsquo;s clients and services.&lt;/p&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; &amp;lt;COMAMND&amp;gt;&lt;/p&gt;
+&lt;p&gt;For example, in the image below, when we got some information about &lt;em&gt;lack&lt;/em&gt;&amp;rsquo;s client by using CTCP VERSION command.&lt;/p&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; VERSION&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/22.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The CTCP VERSION command retrieves the client version of a user, revealing the IRC client software they are using.&lt;/p&gt;
+&lt;p&gt;Next, when we tried using CTCP TIME command on another nick &lt;em&gt;(lexandrop)&lt;/em&gt;, we got the following result.&lt;/p&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; TIME&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/articles/irc/25.png&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The CTCP TIME command requests the local time of a user&amp;rsquo;s IRC client.&lt;/p&gt;
+&lt;h1 id=&#34;some-interesting-ctcp-commands&#34;&gt;Some Interesting CTCP Commands&lt;/h1&gt;
+&lt;p&gt;There are some CTCP commands that are interesting, perhaps they don’t necessarily guarantee the result. This is because, as we are in 2023, IRC clients have improved a lot, and some old school IRC commands have become obsolete. But, we’ll never know what we can get, so that’s why I’m going to explain some CTCP commands that are worth trying.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CTCP PING: The CTCP PING command measures the round-trip time (RTT) between our client and the target user&amp;rsquo;s client, providing an indication of network latency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; PING&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CTCP ACTION: The CTCP ACTION command allows us to send an action or emote to a user or channel, expressing an emotion or describing an action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; ACTTION&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CTCP CLIENTINFO: The CTCP CLIENTINFO command requests information about the CTCP commands supported by a user&amp;rsquo;s IRC client.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Usuage: /CTCP &amp;lt;NICKNAME&amp;gt; CLIENTINFO&lt;/p&gt;
+&lt;h1 id=&#34;bottleneck&#34;&gt;Bottleneck&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;You cannot enter private #servers / #networks without permission or an invite.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;You cannot enter private #channels without permission or an invite.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Admins can kick or ban you anytime with or without notice.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Your IP could be blocked by the admin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;bottomline&#34;&gt;Bottomline&lt;/h1&gt;
+&lt;p&gt;In this comprehensive guide, we have explored a wide range of IRC commands for information gathering and CTCP commands for enhanced communication experiences. By mastering these commands, we can unlock the true potential of IRC, whether it&amp;rsquo;s discovering valuable information, engaging in meaningful conversations, or troubleshooting technical issues. Embrace the power of IRC, and let its commands be our gateway to a world of knowledge, connections, and collaboration.&lt;/p&gt;
+&lt;h1 id=&#34;important-links&#34;&gt;Important Links&lt;/h1&gt;
+&lt;p&gt;Start using IRC (&lt;a href=&#34;https://hexchat.github.io/&#34;&gt;Hexchat&lt;/a&gt;, &lt;a href=&#34;https://irssi.org/&#34;&gt;Irssi&lt;/a&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mirc.com/servers.html&#34;&gt;https://www.mirc.com/servers.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/ntUjftZ-9Jg&#34;&gt;How to use Irssi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/pJSDglguaGE&#34;&gt;How to set up a GUI IRC Client &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://youtu.be/jsXvCKuetWU&#34;&gt;IRC Bouncers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_Relay_Chat&#34;&gt;IRC Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    </item>
+    
+  </channel>
+</rss>

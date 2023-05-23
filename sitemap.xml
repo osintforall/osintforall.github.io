@@ -27,6 +27,8 @@
   </url><url>
     <loc>/about/</loc>
   </url><url>
+    <loc>/tags/advanced/</loc>
+  </url><url>
     <loc>/linux/aib/aib/</loc>
   </url><url>
     <loc>/ctf/case1/1/</loc>
@@ -49,7 +51,11 @@
   </url><url>
     <loc>/tags/infosec/</loc>
   </url><url>
+    <loc>/tags/irc/</loc>
+  </url><url>
     <loc>/</loc>
+  </url><url>
+    <loc>/tags/network/</loc>
   </url><url>
     <loc>/tags/opsec/</loc>
   </url><url>
@@ -66,6 +72,8 @@
     <loc>/tags/</loc>
   </url><url>
     <loc>/tags/unsolvable/</loc>
+  </url><url>
+    <loc>/articles/irc/irc/</loc>
   </url><url>
     <loc>/articles/geo/geo/</loc>
   </url>
